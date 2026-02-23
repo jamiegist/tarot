@@ -1,4 +1,4 @@
-const tarotDeck = [
+export const tarotDeck = [
     // Major Arcana
     {id: 1, name: "The Fool", image: "", arcana: "Major"},
     {id: 2, name: "The Magician", image: "", arcana: "Major"},
@@ -79,11 +79,12 @@ const tarotDeck = [
     {id: 68, name: "Four of Pentacles", image: "", arcana: "Minor"},
     {id: 69, name: "Five of Pentacles", image: "", arcana: "Minor"},
     {id: 70, name: "Six of Pentacles", image: "", arcana: "Minor"},
-    {id: 71, name: "Eight of Pentacles", image: "", arcana: "Minor"},
-    {id: 72, name: "Nine of Pentacles", image: "", arcana: "Minor"},
-    {id: 73, name: "Ten of Pentacles", image: "", arcana: "Minor"},
-    {id: 74, name: "Page of Pentacles", image: "", arcana: "Minor"},
-    {id: 75, name: "Knight of Pentacles", image: "", arcana: "Minor"},
-    {id: 76, name: "Queen of Pentacles", image: "", arcana: "Minor"},
-    {id: 77, name: "King of Pentacles", image: "", arcana: "Minor"},
-]
+    {id: 71, name: "Seven of Pentacles", image: "", arcana: "Minor"},
+    {id: 72, name: "Eight of Pentacles", image: "", arcana: "Minor"},
+    {id: 73, name: "Nine of Pentacles", image: "", arcana: "Minor"},
+    {id: 74, name: "Ten of Pentacles", image: "", arcana: "Minor"},
+    {id: 75, name: "Page of Pentacles", image: "", arcana: "Minor"},
+    {id: 76, name: "Knight of Pentacles", image: "", arcana: "Minor"},
+    {id: 77, name: "Queen of Pentacles", image: "", arcana: "Minor"},
+    {id: 78, name: "King of Pentacles", image: "", arcana: "Minor"},
+];

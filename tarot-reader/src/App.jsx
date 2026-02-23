@@ -1,15 +1,25 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import TarotCard from './TarotCard.jsx';
+import {tarotDeck} from './Deck';
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
-    <>
-     <h1>Tarot Reader</h1>
-     <p>Please draw a card for your reading.</p>
-    </>
-  )
+    <div className="app-container">
+      <h1>Tarot Reading</h1>
+      <div className="deck-grid">
+        {tarotDeck.map((card) => (
+          <TarotCard 
+            key={card.id} 
+            name={card.name} 
+            image={card.image} 
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default App
+
+export default App;
