@@ -1,5 +1,4 @@
 export const tarotDeck = [
-    
     // Major Arcana
     {id: 1, name: "The Fool", image: "./images/the_fool.png", arcana: "Major"},
     {id: 2, name: "The Magician", image: "./images/the_magician.png", arcana: "Major"},

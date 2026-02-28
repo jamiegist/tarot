@@ -5,25 +5,17 @@ import {tarotDeck} from './Deck';
 
 function App() {
 
-  const [reading, setReading] = useState([]);
+  const [reading, setReading] = useState([{isPlaceholder: true }]);
   const [isShuffling, setIsShuffling] = useState(false);
 
   const drawReading = () => {
     setIsShuffling(true);
 
     setTimeout(() => {
-      const shuffled = [...tarotDeck].sort(() => 0.5 - Math.random());
-      
-      const threeCards = shuffled.slice(0, 3);
-      
-      setReading(threeCards);
+      const picked = [...tarotDeck].sort(() => 0.5 - Math.random()).slice(0, 3);
+      setReading(picked);      
       setIsShuffling(false);
     }, 600); 
-  };
-
-  const resetDeck = () => {
-    setReading([]);
-    setIsShuffling(false);
   };
  
   return (
@@ -35,9 +27,9 @@ function App() {
         <div className="shuffling-animation">• • •</div>
       ) : reading.length > 0 ? (
         <div className='tarot-card-wrapper'>
-          {reading.map((card, index) => (
-            <TarotCard key={index} name={card.name} image={card.image} />
-          ))}
+          {reading.map((card, i) => (
+              <TarotCard key={i} {...card} isFlipped={card.isPlaceholder} />
+            ))}
         </div>
         ) : (
           <p>Focus on a question for your reading and draw 3 cards...</p>
@@ -45,14 +37,11 @@ function App() {
       </div>
 
       <div className='controls'>
-      <button onClick={drawReading} disabled={isShuffling} className="draw-button">
-        {isShuffling ? "Picking Your Cards..." : "Draw Your Cards"}
-      </button>
-
-     {reading.length > 0 && !isShuffling && (
-          <button onClick={resetDeck} className="reset-button">
-            Shuffle Again
-          </button>
+      <button className='draw-button' onClick={drawReading} disabled={isShuffling}>
+          {isShuffling ? "Picking..." : "Draw 3 Cards"}
+        </button>
+        {reading.length === 3 && (
+          <button className='reset-button' onClick={() => setReading([{ isPlaceholder: true }])}>Reset</button>
         )}
       </div>
     </div>

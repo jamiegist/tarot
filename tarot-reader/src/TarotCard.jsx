@@ -1,23 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './TarotCard.css';
 
-function TarotCard({ name, image, arcana }) {
+function TarotCard({ name, image, arcana, isFlipped }) {
+  const cardBack = "./images/card_back.png";
+
   return (
-    <div className="tarot-card">
-      <div className="card-header">
-        <span className="arcana-tag">{arcana}</span>
-      </div>
-      
-      {/* If image is empty, it shows a placeholder */}
-      <img 
-        src={image || "./images/card_back.png"} 
-        alt={name} 
-        className="card-image" 
-      />
-      
-      <div className="card-info">
-        <h3 className="card-name">{name}</h3>
-      </div>
+    <div className={`tarot-card ${isFlipped ? 'is-back' : ''}`}>
+      <img src={isFlipped ? cardBack : image} alt={name || "Tarot Card"} className="card-image" />
+      {!isFlipped && (
+        <div className="card-info">
+          <h3>{name}</h3>
+        </div>
+      )}
     </div>
   );
 }
