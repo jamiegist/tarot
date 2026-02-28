@@ -5,48 +5,51 @@ import {tarotDeck} from './Deck';
 
 function App() {
 
-  const [drawnCard, setDrawnCard] = useState(null);
+  const [reading, setReading] = useState([]);
   const [isShuffling, setIsShuffling] = useState(false);
 
-  const drawCard = () => {
-    const randomIndex = Math.floor(Math.random() * tarotDeck.length);
-    setDrawnCard(tarotDeck[randomIndex]);
+  const drawReading = () => {
     setIsShuffling(true);
 
     setTimeout(() => {
-      const randomIndex = Math.floor(Math.random() * tarotDeck.length);
-      setDrawnCard(tarotDeck[randomIndex]);
+      const shuffled = [...tarotDeck].sort(() => 0.5 - Math.random());
+      
+      const threeCards = shuffled.slice(0, 3);
+      
+      setReading(threeCards);
       setIsShuffling(false);
     }, 600); 
   };
 
   const resetDeck = () => {
-    setDrawnCard(null);
+    setReading([]);
     setIsShuffling(false);
   };
  
   return (
     <div className="app-container">
-      <h1>Tarot Reader</h1>
+      <h1>Daily Tarot Reading</h1>
 
-      <div className="display-area">
-        {isShuffling ? (
-          <div className="shuffling-animation">• • •</div>
-        ) : drawnCard ? (
-          <div className='tarot-card-wrapper'>
-            <TarotCard name={drawnCard.name} image={drawnCard.image} />
-          </div>
+    <div className="display-area">
+      {isShuffling ? (
+        <div className="shuffling-animation">• • •</div>
+      ) : reading.length > 0 ? (
+        <div className='tarot-card-wrapper'>
+          {reading.map((card, index) => (
+            <TarotCard key={index} name={card.name} image={card.image} />
+          ))}
+        </div>
         ) : (
-          <p>Focus on your question and ask...</p>
+          <p>Focus on a question for your reading and draw 3 cards...</p>
         )}
       </div>
 
       <div className='controls'>
-      <button onClick={drawCard} disabled={isShuffling} className="draw-button">
-        {isShuffling ? "Shuffling..." : "Draw a Card"}
+      <button onClick={drawReading} disabled={isShuffling} className="draw-button">
+        {isShuffling ? "Picking Your Cards..." : "Draw Your Cards"}
       </button>
 
-      {drawnCard && (
+     {reading.length > 0 && !isShuffling && (
           <button onClick={resetDeck} className="reset-button">
             Shuffle Again
           </button>

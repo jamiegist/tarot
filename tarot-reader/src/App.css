@@ -9,7 +9,21 @@
   padding: 2em;
 }
 
+h1 {
+  
+}
+
+p {
+
+}
+
 .tarot-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 2rem;
   width: 100%;
   max-width: 300px;
   margin: 0 auto;

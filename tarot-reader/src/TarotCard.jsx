@@ -10,7 +10,7 @@ function TarotCard({ name, image, arcana }) {
       
       {/* If image is empty, it shows a placeholder */}
       <img 
-        src={image || "/images/card_back.png"} 
+        src={image || "./images/card_back.png"} 
         alt={name} 
         className="card-image" 
       />
