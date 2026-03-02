@@ -9,24 +9,53 @@
   padding: 2em;
 }
 
-h1 {
-
+.shuffling-deck {
+  position: relative;
+  width: 200px;
+  height: 300px;
 }
 
-p {
+.shuffle-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2c3e50;
+  border: 2px solid gold;
+  border-radius: 12px;
+  animation: fan-out 0.6s infinite ease-in-out;
+}
 
+.shuffle-card:nth-child(1) { animation-delay: 0s; }
+.shuffle-card:nth-child(2) { animation-delay: 0.2s; }
+.shuffle-card:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes fan-out {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(60px, -10px) rotate(10deg); z-index: 1; }
+}
+
+.flip-card-front:hover {
+  box-shadow: 0 0 20px rgba(46, 99, 242, 0.6);
+  transform: rotateY(180deg) scale(1.02);
+  transition: all 0.3s ease;
 }
 
 .tarot-card-wrapper {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
   margin-top: 2rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+.tarot-card-wrapper > * {
+  flex: 0 1 250px;
+  max-width: 300px;
 }
 
 .tarot-card-wrapper img {
@@ -34,6 +63,13 @@ p {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .tarot-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .controls {
@@ -92,4 +128,16 @@ p {
 .draw-button:hover {
   background-color: white;
   color: black;
+}
+
+.tarot-card-wrapper .flip-card:nth-child(1) .flip-card-inner {
+  transition-delay: 0.1s;
+}
+
+.tarot-card-wrapper .flip-card:nth-child(2) .flip-card-inner {
+  transition-delay: 0.4s;
+}
+
+.tarot-card-wrapper .flip-card:nth-child(3) .flip-card-inner {
+  transition-delay: 0.7s;
 }

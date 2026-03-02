@@ -29,7 +29,13 @@ function App() {
       )}
 
 <div className="display-area">
-  {isShuffling && <div className="shuffling-animation">• • •</div>}
+  {isShuffling && (
+    <div className="shuffling-deck">
+      <div className="shuffle-card"></div>
+      <div className="shuffle-card"></div>
+      <div className="shuffle-card"></div>
+    </div>
+  )}
 
   {!isShuffling && reading.length > 0 && (
     <div className='tarot-card-wrapper'>
