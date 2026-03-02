@@ -1,8 +1,11 @@
 # Daily Tarot Reader
-Daily tarot reading application built with React. User asks a question and then draws three cards for their reading.
+Daily tarot reading application built with React. User asks a question and then draws three cards for their reading. Please note: tarot readings are symbolic and open to interpretation, thus not meant to be taken literally.
+
+In Progress:
+- Adding meanings to each card for interpretation.
 
 Future Features:
-- Add meaning functionality to tarot cards for more thorough interpretation.
+- Add card reversals & meanings.
 - Implement URL hosting to make it a full-fledged webpage.
 
 Resources:
