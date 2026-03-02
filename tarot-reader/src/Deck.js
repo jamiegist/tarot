@@ -1,6 +1,6 @@
 export const tarotDeck = [
     // Major Arcana
-    {id: 1, name: "The Fool", image: "./images/the_fool.png", arcana: "Major", meaning: "Folly, mania, extravagance, indoxication, delirium, frenzy, bewrayment."},
+    {id: 1, name: "The Fool", image: "./images/the_fool.png", arcana: "Major", meaning: "Folly, mania, extravagance, intoxication, delirium, frenzy, betraying secrets."},
     {id: 2, name: "The Magician", image: "./images/the_magician.png", arcana: "Major", meaning: "Skill, diplomacy, address, sickness, pain, loss, disaster, self-confidence, represents the Querant (if male)"},
     {id: 3, name: "The High Priestess", image: "./images/the_high_priestess.png", arcana: "Major", meaning: "Secrets, mystery, the future as yet unrevealed, the woman who interest the Querant (if male); the Querant (if female) silence, tenacity; wisdom, science."},
     {id: 4, name: "The Empress", image: "./images/the_empress.png", arcana: "Major", meaning: "Fruitfulness, initiative, action, long days, clandestine, the unknown, difficulty, doubt, ignorance."},
@@ -53,7 +53,7 @@ export const tarotDeck = [
     {id: 46, name: "Ten of Cups", image: "./images/ten_of_cups.png", arcana: "Minor", meaning: "Contentment, repose of the entire heart - the perfection of that state, if with several picture cards, a person who is taking charge of the Querent's interests. Also the town, village or country inhabited by the Querent."},
     {id: 47, name: "Page of Cups", image: "./images/page_of_cups.png", arcana: "Minor", meaning: "Fair-haired young man, one impelled to render service and with whom the Querent will be connected, a studious youth, news, message, application, reflection, meditation - also these things directed to business."},
     {id: 48, name: "Knight of Cups", image: "./images/knight_of_cups.png", arcana: "Minor", meaning: "Arrival, approach - sometimes that of a messenger, advances, proposition, demeanor, invitation, incitement."},
-    {id: 49, name: "Queen of Cups", image: "./images/queen_of_cups.png", arcana: "Minor", meaning: "Good, fair-haired woman, honest, devoted, who will do service to the Querent. Loving intelligence, and hence the gift of vision, success, happiness, pleasure, also wisdom, virtue."},
+    {id: 49, name: "Queen of Cups", image: "./images/queen_of_cups.png", arcana: "Minor", meaning: "A good, fair-haired woman, honest, devoted, who will do service to the Querent. Loving intelligence, and hence the gift of vision, success, happiness, pleasure, also wisdom, virtue."},
     {id: 50, name: "King of Cups", image: "./images/king_of_cups.png", arcana: "Minor", meaning: "Fair-haired man, man of business, law, or divinity, responsible, disposed to oblige the Querent. Also equity, art and science, including those who profess science, law and art, creative intelligence."},
 
     // Suit: Swords
@@ -77,7 +77,7 @@ export const tarotDeck = [
     {id: 66, name: "Two of Pentacles", image: "./images/two_of_pentacles.png", arcana: "Minor", meaning: "It is represneted as a card of gaiety, recreation and its connections, which is the subject of the design. But it is read also as news and messages in writing, such as obstacles, agitation, trouble, embroilment."},
     {id: 67, name: "Three of Pentacles", image: "./images/three_of_pentacles.png", arcana: "Minor", meaning: "Métier, trade, skilled labor. Usually, however, regarded as a card of nobility, aristocracy, renown, glory."},
     {id: 68, name: "Four of Pentacles", image: "./images/four_of_pentacles.png", arcana: "Minor", meaning: "The surety of possessions, cleaving to that which one has, gifts, legacy, inheritance."},
-    {id: 69, name: "Five of Pentacles", image: "./images/five_of_pentacles.png", arcana: "Minor", meaning: "It foretells material trouble above all, whether in the form illustrated, that is, destitution, or otherwise. For some cartomancits, it is a card of love and lovers - wife, husband, friend, mistress - also concordance, affinities. These alternatives cannot be harmonized."},
+    {id: 69, name: "Five of Pentacles", image: "./images/five_of_pentacles.png", arcana: "Minor", meaning: "It foretells material trouble above all, whether in the form illustrated, that is, destitution, or otherwise. For some cartomancists, it is a card of love and lovers - wife, husband, friend, mistress - also concordance, affinities. These alternatives cannot be harmonized."},
     {id: 70, name: "Six of Pentacles", image: "./images/six_of_pentacles.png", arcana: "Minor", meaning: "Presents, gifts, gratification. Another account says attention, vigilance, now is the accepted time, present prosperity, etc."},
     {id: 71, name: "Seven of Pentacles", image: "./images/seven_of_pentacles.png", arcana: "Minor", meaning: "These are exceedingly contradictory, in the main, it is a card of money, business, barter - but one reading gives altercation, quarrel, and another innocence, ingenuity, purgation."},
     {id: 72, name: "Eight of Pentacles", image: "./images/eight_of_pentacles.png", arcana: "Minor", meaning: "Work, employment, commission, craftsmanship, skill in craft and business."},
