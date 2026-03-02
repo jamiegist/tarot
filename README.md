@@ -7,3 +7,5 @@ Future Features:
 
 Resources:
 Images sourced from the Rider-Waite deck, downloaded from https://steve-p.org/cards/RWSa.html 
+
+Card Meanings: https://steve-p.org/cards/Rider-Waite-Smith%20Tarot%20LWB.pdf 

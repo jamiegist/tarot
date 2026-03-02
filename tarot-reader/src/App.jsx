@@ -8,6 +8,8 @@ function App() {
   const [reading, setReading] = useState([{isPlaceholder: true }]);
   const [isShuffling, setIsShuffling] = useState(false);
 
+  const showingPlaceholder = reading.length === 1 && reading[0].isPlaceholder;
+
   const drawReading = () => {
     setIsShuffling(true);
 
@@ -22,23 +24,25 @@ function App() {
     <div className="app-container">
       <h1>Daily Tarot Reading</h1>
 
-    <div className="display-area">
-      {isShuffling ? (
-        <div className="shuffling-animation">• • •</div>
-      ) : reading.length > 0 ? (
-        <div className='tarot-card-wrapper'>
-          {reading.map((card, i) => (
-              <TarotCard key={i} {...card} isFlipped={card.isPlaceholder} />
-            ))}
-        </div>
-        ) : (
-          <p>Focus on a question for your reading and draw 3 cards...</p>
-        )}
-      </div>
+      {showingPlaceholder && !isShuffling && (
+        <p className="intro-text">Focus on a question for your reading and draw 3 cards...</p>
+      )}
+
+<div className="display-area">
+  {isShuffling && <div className="shuffling-animation">• • •</div>}
+
+  {!isShuffling && reading.length > 0 && (
+    <div className='tarot-card-wrapper'>
+      {reading.map((card, i) => (
+        <TarotCard key={i} {...card} isFlipped={card.isPlaceholder} />
+      ))}
+    </div>
+  )}
+</div>
 
       <div className='controls'>
       <button className='draw-button' onClick={drawReading} disabled={isShuffling}>
-          {isShuffling ? "Picking..." : "Draw 3 Cards"}
+          {isShuffling ? "Picking..." : "Draw Your Cards"}
         </button>
         {reading.length === 3 && (
           <button className='reset-button' onClick={() => setReading([{ isPlaceholder: true }])}>Reset</button>
@@ -47,7 +51,6 @@ function App() {
     </div>
   );
 }
-
 
 
 export default App;
