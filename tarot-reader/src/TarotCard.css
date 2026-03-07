@@ -73,3 +73,7 @@
   flex-direction: column;
   height: 100%;
 }
+
+.tarot-card.reversed .card-image {
+  transform: rotate(180deg);
+}

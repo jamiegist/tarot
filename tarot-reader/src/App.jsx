@@ -14,7 +14,7 @@ function App() {
     setIsShuffling(true);
 
     setTimeout(() => {
-      const picked = [...tarotDeck].sort(() => 0.5 - Math.random()).slice(0, 3);
+      const picked = [...tarotDeck].sort(() => 0.5 - Math.random()).slice(0, 3).map(card => ({ ...card, isReversed: Math.random() > 0.5 }));
       setReading(picked);      
       setIsShuffling(false);
     }, 600); 
