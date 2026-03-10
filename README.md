@@ -13,4 +13,4 @@ Planned Features:
 Resources:
 Images sourced from the Rider-Waite deck, downloaded from https://steve-p.org/cards/RWSa.html 
 
-Card Meanings: https://steve-p.org/cards/Rider-Waite-Smith%20Tarot%20LWB.pdf 
+Card Meanings: https://labyrinthos.co/blogs/tarot-card-meanings-list?srsltid=AfmBOoqchZ_uDO5Y9crx8-goglQRMFmZitHZGxgo4ZFeC5a8SCBmu2vv 
