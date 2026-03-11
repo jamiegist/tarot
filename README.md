@@ -3,9 +3,7 @@ Daily tarot reading application built with React. User asks a question and then 
 
 Recent Updates:
 - Adding meanings to each card for interpretation. ✅
-
-Features In Progress:
-- Add card reversals & meanings.
+- Add card reversals & meanings. ✅
 
 Planned Features:
 - Implement URL hosting to make it a full-fledged webpage.
