@@ -1,7 +1,10 @@
 # Daily Tarot Reader
 Daily tarot reading application built with React. User asks a question and then draws three cards for their reading. Please note: tarot readings are symbolic and open to interpretation, thus not meant to be taken literally.
 
+Link to Live Aoplication: https://tarot-mu-sand.vercel.app/
+
 Recent Updates:
+- The app is live! Go to the website https://tarot-mu-sand.vercel.app/ to use it yourself.
 - Adding meanings to each card for interpretation. ✅
 - Add card reversals & meanings. ✅
 
