@@ -63,7 +63,7 @@
 }
 
 .tarot-card:not(.is-back):hover .card-image {
-  box-shadow: 0 0 20px 5px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 20px 5px rgba(244, 240, 218, 0.4);
   transition: box-shadow 0.3s ease;
 }
 

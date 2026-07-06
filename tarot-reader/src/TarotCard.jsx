@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './TarotCard.css';
 
-function TarotCard({ name, image, arcana, isFlipped, isReversed, meaning, meaningReversed }) {
+function TarotCard({ name, image, isFlipped, isReversed, meaning, meaningReversed }) {
   const cardBack = "./images/card_back.png";
 
   return (
@@ -14,7 +14,6 @@ function TarotCard({ name, image, arcana, isFlipped, isReversed, meaning, meanin
       {!isFlipped && (
         <div className="card-info">
           <h3>{name} {isReversed && "(Reversed)"}</h3>
-          {/* Display the reversed meaning if applicable */}
           <p>{isReversed ? (meaningReversed || `Reversed: ${meaning}`) : meaning}</p>
         </div>
       )}
