@@ -1,5 +1,5 @@
 # Daily Tarot Reader
-Daily tarot reading web app where the user asks a question and then draws three cards for their reading.
+Daily tarot reading web app where the user asks a question and then gets a three-card draw in response.
 **Please note: tarot readings are symbolic, thus not meant to be taken literally.**
 
 ## How To Use

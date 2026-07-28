@@ -7,7 +7,9 @@ function TarotCard({ position, name, image, isFlipped, isReversed, meaning, mean
   return (
     
     <div className={`tarot-card ${isFlipped ? 'is-back' : ''} ${isReversed ? 'reversed' : ''}`}>
-      {position && <h2 className="card-position-label">{position}</h2>}
+      {!isFlipped && position && (
+        <h2 className="card-position-label">{position}</h2>
+      )}
       <img 
         src={isFlipped ? cardBack : image} 
         alt={name} 

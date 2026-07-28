@@ -17,11 +17,11 @@ export const tarotDeck = [
     {id: 15, name: "Temperance", image: "./images/temperance.png", arcana: "Major", meaning: "Middle path, patience, finding meaning.", meaningReversed: "Extremes, excess, lack of balance."},
     {id: 16, name: "The Devil", image: "./images/the_devil.png", arcana: "Major", meaning: "Addiction, materialism, playfulness.", meaningReversed: "Freedom, release, restoring control."},
     {id: 17, name: "The Tower", image: "./images/the_tower.png", arcana: "Major", meaning: "Sudden upheaval, broken pride, disaster.", meaningReversed: "Disaster avoided, delayed disaster, fear of suffering."},
-    {id: 18, name: "Yhr Star", image: "./images/the_star.png", arcana: "Major", meaning: "Hope, faith, rejuvenation.", meaningReversed: "Faithlessness, discouragement, insecurity."},
+    {id: 18, name: "The Star", image: "./images/the_star.png", arcana: "Major", meaning: "Hope, faith, rejuvenation.", meaningReversed: "Faithlessness, discouragement, insecurity."},
     {id: 19, name: "The Moon", image: "./images/the_moon.png", arcana: "Major", meaning: "Unconscious, illusions, intuition.", meaningReversed: "Confusion, fear, misinterpretation."},
     {id: 20, name: "The Sun", image: "./images/the_sun.png", arcana: "Major", meaning: "Joy, success, celebration, positivity.", meaningReversed: "Negativity, depression, sadness."},
     {id: 21, name: "Judgement", image: "./images/judgement.png", arcana: "Major", meaning: "Reflection, reckoning, awakening.", meaningReversed: "Lack of self-awareness, doubt, self-loathing."},
-    {id: 22, name: "The World", image: "./images/the_world.png", arcana: "Major", meaning: "Fulfillment, harmony, completion.", meaningReversed: "Incompletion, no closure."},
+    {id: 22, name: "The World", image: "./images/the_world.png", arcana: "Major", meaning: "Fulfillment, harmony, completion.", meaningReversed: "Incomplete, no closure."},
 
     // Minor Arcana
     // Suit: Wands
