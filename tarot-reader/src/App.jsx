@@ -8,6 +8,8 @@ function App() {
   const [reading, setReading] = useState([{isPlaceholder: true }]);
   const [isShuffling, setIsShuffling] = useState(false);
 
+  const positions = ["Past", "Present", "Future"];
+
   const showingPlaceholder = reading.length === 1 && reading[0].isPlaceholder;
 
   const drawReading = () => {
@@ -25,7 +27,8 @@ function App() {
       <h1>Daily Tarot Reading</h1>
 
       {showingPlaceholder && !isShuffling && (
-        <p className="intro-text">Focus on a question for your reading and draw 3 cards...</p>
+        <p className="intro-text">Focus on a question or object for your reading and draw 3 cards. The first card represents the past,
+        the second one represents the present, and the third card represents the future.</p>
       )}
 
 <div className="display-area">
@@ -40,7 +43,7 @@ function App() {
   {!isShuffling && reading.length > 0 && (
     <div className='tarot-card-wrapper'>
       {reading.map((card, i) => (
-        <TarotCard key={i} {...card} isFlipped={card.isPlaceholder} />
+        <TarotCard position={positions[i]} key={i} {...card} isFlipped={card.isPlaceholder} />
       ))}
     </div>
   )}
@@ -48,7 +51,7 @@ function App() {
 
       <div className='controls'>
       <button className='draw-button' onClick={drawReading} disabled={isShuffling}>
-          {isShuffling ? "Picking..." : "Draw Your Cards"}
+          {isShuffling ? "Picking..." : "Draw Cards"}
         </button>
         {reading.length === 3 && (
           <button className='reset-button' onClick={() => setReading([{ isPlaceholder: true }])}>Reset</button>

@@ -1,7 +1,7 @@
 export const tarotDeck = [
     // Major Arcana
     {id: 1, name: "The Fool", image: "./images/the_fool.png", arcana: "Major", meaning: "Innocence, new beginnings, free spirit.", meaningReversed: "Recklessness, taken advantage of, inconsideration."},
-    {id: 2, name: "The Magician", image: "./images/the_magician.png", arcana: "Major", meaning: "Willpoer, desire, creation, manifestation.", meaningReversed: "Trickery, illusions, out of touch."},
+    {id: 2, name: "The Magician", image: "./images/the_magician.png", arcana: "Major", meaning: "Willpower, desire, creation, manifestation.", meaningReversed: "Trickery, illusions, out of touch."},
     {id: 3, name: "The High Priestess", image: "./images/the_high_priestess.png", arcana: "Major", meaning: "Intuitive, unconscious, inner voice.", meaningReversed: "Lack of center, lost inner voice, repressed feelings."},
     {id: 4, name: "The Empress", image: "./images/the_empress.png", arcana: "Major", meaning: "Motherhood, fertility, nature.", meaningReversed: "Dependence, smothering, emptiness, nosiness"},
     {id: 5, name: "The Emperor", image: "./images/the_emperor.png", arcana: "Major", meaning: "Authority, structure, control, fatherhood.", meaningReversed: "Tyranny, rigidity, coldness."},
