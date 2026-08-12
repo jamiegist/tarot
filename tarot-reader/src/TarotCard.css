@@ -1,6 +1,31 @@
+.tarot-card {
+  width: 250px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tarot-card.reversed .card-image {
+  transform: rotate(180deg);
+}
+
+.tarot-card:not(.is-back):hover {
+  transform: translateY(-10px) scale(1.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+}
+
+.tarot-card:not(.is-back):hover .card-image {
+  box-shadow: 0 0 20px 5px rgba(244, 240, 218, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Card info (name + meaning) */
 .card-info {
   padding: 10px;
   text-align: center;
+  opacity: 0;
   animation: fadeInBlur 0.6s ease-out forwards;
 }
 
@@ -16,7 +41,7 @@
   font-size: 0.85rem;
   line-height: 1.5;
   color: #444;
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -35,45 +60,55 @@
   }
 }
 
-/* Target the info inside the FIRST card */
-.tarot-card-wrapper .tarot-card:nth-child(1) .card-info {
-  animation-delay: 0.1s;
+/* Staggered fade-in delays by card order */
+.tarot-card-wrapper .tarot-card:nth-child(1) .card-info { animation-delay: 0.1s; }
+.tarot-card-wrapper .tarot-card:nth-child(2) .card-info { animation-delay: 0.4s; }
+.tarot-card-wrapper .tarot-card:nth-child(3) .card-info { animation-delay: 0.7s; }
+
+.tarot-card-wrapper .flip-card:nth-child(1) .flip-card-inner { transition-delay: 0.1s; }
+.tarot-card-wrapper .flip-card:nth-child(2) .flip-card-inner { transition-delay: 0.4s; }
+.tarot-card-wrapper .flip-card:nth-child(3) .flip-card-inner { transition-delay: 0.7s; }
+
+.flip-card-front:hover {
+  box-shadow: 0 0 20px rgba(46, 99, 242, 0.6);
+  transform: rotateY(180deg) scale(1.02);
+  transition: all 0.3s ease;
 }
 
-/* Target the info inside the SECOND card */
-.tarot-card-wrapper .tarot-card:nth-child(2) .card-info {
-  animation-delay: 0.4s;
-}
-
-/* Target the info inside the THIRD card */
-.tarot-card-wrapper .tarot-card:nth-child(3) .card-info {
-  animation-delay: 0.7s;
-}
-
-/* Ensure the info is invisible until the animation starts */
-.card-info {
-  opacity: 0; 
-  animation: fadeInBlur 0.6s ease-out forwards;
-}
-
-.tarot-card:not(.is-back):hover {
-  transform: translateY(-10px) scale(1.02);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 10;
-}
-
-.tarot-card:not(.is-back):hover .card-image {
-  box-shadow: 0 0 20px 5px rgba(244, 240, 218, 0.4);
-  transition: box-shadow 0.3s ease;
-}
-
-.tarot-card {
-  transition: transform 0.3s ease;
+/* ===== Celtic Cross layout ===== */
+.celtic-cross-placeholder {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  justify-content: center;
 }
 
-.tarot-card.reversed .card-image {
-  transform: rotate(180deg);
+.celtic-cross-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 250px) 60px 250px;
+  grid-template-areas:
+    ".           challenge   .           .   final-outcome"
+    ".           crown       .           .   hopes-fears"
+    "recent-past present     near-future .   external-influences"
+    ".           foundation  .           .   attitude";
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.area-present              { grid-area: present; }
+.area-challenge             { grid-area: challenge; }
+.area-foundation            { grid-area: foundation; }
+.area-recent-past           { grid-area: recent-past; }
+.area-crown                 { grid-area: crown; }
+.area-near-future           { grid-area: near-future; }
+.area-attitude               { grid-area: attitude; }
+.area-external-influences    { grid-area: external-influences; }
+.area-hopes-fears            { grid-area: hopes-fears; }
+.area-final-outcome          { grid-area: final-outcome; }
+
+.tarot-card.is-crossing {
+  transform: rotate(90deg);
+}
+
+.tarot-card.is-crossing.reversed {
+  transform: rotate(90deg) rotate(180deg);
 }
