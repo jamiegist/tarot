@@ -49,6 +49,12 @@ function App() {
     setReading([{ isPlaceholder: true }]);
   };
 
+  const getButtonLabel = () => {
+    if (isShuffling) return "Picking...";
+    if (showingPlaceholder) return "Draw Cards";
+    return "Reshuffle";
+  };
+
   return (
     <div className="app-container">
       <h1>Daily Tarot Reading</h1>
@@ -56,16 +62,16 @@ function App() {
 
       <div className="spread-selector">
         {Object.entries(SPREADS).map(([key, spread]) => (
-          <button
-            key={key}
-            className={`spread-option ${spreadKey === key ? 'active' : ''}`}
-            onClick={() => handleSpreadChange(key)}
-            disabled={isShuffling}
-          >
-            {spread.label}
-          </button>
-        ))}
-      </div>
+      <button
+        key={key}
+        className={`spread-option ${spreadKey === key ? 'active' : ''}`}
+        onClick={() => handleSpreadChange(key)}
+        disabled={isShuffling}
+      >
+        {spread.label}
+      </button>
+  ))}
+</div>
 
       <SpreadComponent
         reading={reading}
@@ -74,9 +80,11 @@ function App() {
         showingPlaceholder={showingPlaceholder}
       />
 
+
+
       <div className="controls">
-        <button className="draw-button" onClick={drawReading} disabled={isShuffling}>
-          {isShuffling ? "Picking..." : "Draw Cards"}
+        <button className='draw-button' onClick={drawReading} disabled={isShuffling}>
+          {getButtonLabel()}
         </button>
         {reading.length === currentSpread.cardCount && (
           <button className="reset-button" onClick={() => setReading([{ isPlaceholder: true }])}>
