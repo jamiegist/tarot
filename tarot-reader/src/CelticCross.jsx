@@ -1,8 +1,8 @@
 import TarotCard from './TarotCard.jsx';
 
 const AREA_BY_INDEX = [
-  'present', 'challenge', 'foundation', 'recent-past', 'crown',
-  'near-future', 'attitude', 'external-influences', 'hopes-fears', 'final-outcome',
+  'present-the-self', 'problem', 'past', 'future', 'conscious',
+  'unconscious', 'your-influence', 'external-influence', 'hopes-fears', 'outcome',
 ];
 
 function CelticCross({ reading, isShuffling, positions, showingPlaceholder }) {

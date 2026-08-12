@@ -16,8 +16,8 @@ const SPREADS = {
     component: CelticCross,
     cardCount: 10,
     positions: [
-      'Present', 'Challenge', 'Foundation', 'Recent Past', 'Crown',
-      'Near Future', 'Attitude', 'Environment', 'Hopes/Fears', 'Outcome',
+      'Present/The Self', 'Problem', 'Past', 'Future', 'Conscious',
+      'Unconscious', 'Your Influence', 'External Influence', 'Hopes/Fears', 'Outcome',
     ],
   },
 };

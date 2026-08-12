@@ -85,30 +85,43 @@
   display: grid;
   grid-template-columns: repeat(3, 250px) 60px 250px;
   grid-template-areas:
-    ".           challenge   .           .   final-outcome"
-    ".           crown       .           .   hopes-fears"
-    "recent-past present     near-future .   external-influences"
-    ".           foundation  .           .   attitude";
+    "problem     .          conscious              .   outcome"
+    "future present-the-self   unconscious    .   hopes-fears"
+    ".      past                .              .   external-influence"
+    ".      .                   .              .   your-influence";
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
 }
 
-.area-present              { grid-area: present; }
-.area-challenge             { grid-area: challenge; }
-.area-foundation            { grid-area: foundation; }
-.area-recent-past           { grid-area: recent-past; }
-.area-crown                 { grid-area: crown; }
-.area-near-future           { grid-area: near-future; }
-.area-attitude               { grid-area: attitude; }
-.area-external-influences    { grid-area: external-influences; }
-.area-hopes-fears            { grid-area: hopes-fears; }
-.area-final-outcome          { grid-area: final-outcome; }
+.area-present-the-self   { grid-area: present-the-self;}
+.area-problem             { grid-area: problem;}
+.area-past                { grid-area: past; }
+.area-future              { grid-area: future; }
+.area-conscious           { grid-area: conscious; }
+.area-unconscious         { grid-area: unconscious; }
+.area-your-influence      { grid-area: your-influence; }
+.area-external-influence  { grid-area: external-influence; }
+.area-hopes-fears         { grid-area: hopes-fears; }
+.area-outcome             { grid-area: outcome; }
 
-.tarot-card.is-crossing {
-  transform: rotate(90deg);
+.area-problem .tarot-card {
+  pointer-events: auto;
 }
 
-.tarot-card.is-crossing.reversed {
-  transform: rotate(90deg) rotate(180deg);
+/* Crossing Card Styling (Card #2 / Problem) */
+.tarot-card.is-crossing {
+  transform: rotate(90deg) scale(0.9);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  outline: 2px solid silver;
+  outline-offset: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px grey(255, 215, 0, 0.3);
+}
+
+.tarot-card.is-crossing:hover {
+  transform: rotate(0deg) scale(1.02);
+  z-index: 20;
+  
+  box-shadow: 0 0 20px 5px white(255, 215, 0, 0.6);
 }
